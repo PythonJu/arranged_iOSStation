@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Vd-eD-ToO">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="Ygi-vd-mgW">
+            <objects>
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Vd-eD-ToO" customClass="FirstViewController" customModule="ios_stations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SJ1-16-x4U">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkW-HK-xOZ">
+                                <rect key="frame" x="20" y="838" width="80" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="JCI-6H-20w"/>
+                                    <constraint firstAttribute="height" constant="44" id="bLq-cV-9RL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="restoringData:" destination="4Vd-eD-ToO" eventType="touchUpInside" id="o1K-g5-dfe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lz-SE-Yvf">
+                                <rect key="frame" x="174" y="838" width="80" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="30c-uv-Lh2"/>
+                                    <constraint firstAttribute="height" constant="44" id="gFy-iJ-POC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                <state key="normal" title="更新">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpInside:" destination="4Vd-eD-ToO" eventType="touchUpInside" id="CJ3-yP-28x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4y-gh-8ot">
+                                <rect key="frame" x="328" y="838" width="80" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="BKF-Ag-3eN"/>
+                                    <constraint firstAttribute="height" constant="44" id="cDw-c9-WE6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                <state key="normal" title="次へ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipData:" destination="4Vd-eD-ToO" eventType="touchUpInside" id="85C-Q2-n2T"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="olI-mx-6gX">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="832"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseCell" style="IBUITableViewCellStyleDefault" id="3Ax-k8-PK3" customClass="BookCell" customModule="ios_stations" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="428" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Ax-k8-PK3" id="W4y-2M-may">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellImageView" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="can-CA-smx">
+                                                    <rect key="frame" x="10" y="0.0" width="80" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellTitleLabel" text="titleLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7D-h3-HwQ">
+                                                    <rect key="frame" x="100" y="10" width="300" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellDetailLabel" text="detailLabel" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZa-aL-Pae">
+                                                    <rect key="frame" x="100" y="35" width="300" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellDetailLabel" destination="nZa-aL-Pae" id="8Dn-AL-3k3"/>
+                                            <outlet property="cellImageView" destination="can-CA-smx" id="2Ym-Np-gVR"/>
+                                            <outlet property="cellTitleLabel" destination="s7D-h3-HwQ" id="Y8C-TD-1oy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4Vd-eD-ToO" id="CtZ-Ci-Cn7"/>
+                                    <outlet property="delegate" destination="4Vd-eD-ToO" id="9ii-JK-0x8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y0X-hU-VOq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0lz-SE-Yvf" firstAttribute="centerX" secondItem="SJ1-16-x4U" secondAttribute="centerX" id="6S6-NP-fsO"/>
+                            <constraint firstItem="BkW-HK-xOZ" firstAttribute="leading" secondItem="Y0X-hU-VOq" secondAttribute="leading" constant="20" id="8Gv-RD-J85"/>
+                            <constraint firstItem="olI-mx-6gX" firstAttribute="top" secondItem="SJ1-16-x4U" secondAttribute="top" id="IfE-lo-g05"/>
+                            <constraint firstItem="Y0X-hU-VOq" firstAttribute="trailing" secondItem="olI-mx-6gX" secondAttribute="trailing" id="J3y-a6-gjs"/>
+                            <constraint firstItem="Y0X-hU-VOq" firstAttribute="bottom" secondItem="0lz-SE-Yvf" secondAttribute="bottom" constant="10" id="Mxw-y2-81h"/>
+                            <constraint firstItem="Y0X-hU-VOq" firstAttribute="bottom" secondItem="BkW-HK-xOZ" secondAttribute="bottom" constant="10" id="Qgz-fi-54F"/>
+                            <constraint firstItem="Y0X-hU-VOq" firstAttribute="bottom" secondItem="olI-mx-6gX" secondAttribute="bottom" constant="60" id="ba7-3l-wgP"/>
+                            <constraint firstItem="0lz-SE-Yvf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BkW-HK-xOZ" secondAttribute="trailing" constant="10" id="bkQ-tc-UgT"/>
+                            <constraint firstAttribute="trailing" secondItem="p4y-gh-8ot" secondAttribute="trailing" constant="20" id="hkA-Ok-qx8"/>
+                            <constraint firstItem="Y0X-hU-VOq" firstAttribute="bottom" secondItem="p4y-gh-8ot" secondAttribute="bottom" constant="10" id="mAv-ua-h11"/>
+                            <constraint firstItem="p4y-gh-8ot" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0lz-SE-Yvf" secondAttribute="trailing" constant="10" id="mBm-Ni-dqA"/>
+                            <constraint firstItem="olI-mx-6gX" firstAttribute="leading" secondItem="Y0X-hU-VOq" secondAttribute="leading" id="nCD-Zt-mgN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backDataButton" destination="BkW-HK-xOZ" id="HAO-KJ-O4C"/>
+                        <outlet property="nextDataButton" destination="p4y-gh-8ot" id="la9-Yi-s4G"/>
+                        <outlet property="reloadDataButton" destination="0lz-SE-Yvf" id="i3c-YG-6Zy"/>
+                        <outlet property="tableView" destination="olI-mx-6gX" id="wpe-Pb-gdD"/>
+                        <outlet property="view" destination="SJ1-16-x4U" id="ZPx-aa-MCg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VIO-xK-e31" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="72.511848341232223"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" width="384" height="384"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
